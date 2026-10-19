@@ -1,0 +1,59 @@
+{
+  "skill_name": "design-award-lens",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "my habit tracker's main screen looks super AI generated lol, can you review HabitDashboardView.swift and tell me how to make it look like something that could actually win an apple design award? fix it after if you think it's worth it",
+      "expected_output": "Report naming slop patterns (gradient bg, emoji icons, fixed font sizes, nested cards+shadows, fake tab bar, centered layout, no a11y) each tied to a cited ADA app, then a revised SwiftUI file using system tab bar, text styles, SF Symbols, semantic colors.",
+      "files": [
+        "evals/files/HabitDashboardView.swift"
+      ],
+      "assertions": [
+        "Cites at least 3 specific Apple Design Award apps by name with year and/or category",
+        "Every cited ADA app/year/category matches references/ada-winners.md (no invented awards)",
+        "Ties each major recommendation to a concrete award-app example rather than generic taste",
+        "Flags the full-screen purple/blue gradient background",
+        "Flags emoji used as icons (habit icons and/or tab bar) and recommends SF Symbols",
+        "Flags fixed .font(.system(size:)) and recommends Dynamic Type text styles",
+        "Flags the hand-built HStack tab bar and recommends TabView",
+        "Mentions accessibility beyond Dynamic Type (VoiceOver labels, color-only state, or Reduce Motion)",
+        "Revised Swift file uses TabView, text styles (.title/.body etc.), and Image(systemName:)",
+        "Revised Swift file removes the root LinearGradient background",
+        "Report includes a 'what's already good' / keep section"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm building an iPad + Apple Pencil app for amateur birdwatchers to log sightings and sketch birds in the field. Nothing built yet. What design direction should I go with so it feels genuinely premium and not like every other SwiftUI app?",
+      "expected_output": "Asks or assumes minimal essentials, proposes 2-3 distinct directions each anchored to specific ADA winners/finalists, covering typography, color, signature interaction, platform features (Pencil, widgets etc.), accessibility, things to avoid; offers starter tokens + screen.",
+      "files": [],
+      "assertions": [
+        "Cites at least 3 specific Apple Design Award apps by name with year and/or category",
+        "Every cited ADA app/year/category matches references/ada-winners.md (no invented awards)",
+        "Ties each major recommendation to a concrete award-app example rather than generic taste",
+        "Proposes 2-3 distinct named design directions",
+        "Each direction covers typography, color/materials, and a signature interaction",
+        "Addresses Apple Pencil-specific interaction design",
+        "Addresses field conditions (outdoor glare, one-handed/quick logging, offline)",
+        "Mentions platform features beyond the app screen (widgets, Live Activities, App Intents, etc.)",
+        "Lists things to deliberately avoid"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Here's what my Mac menu-bar pomodoro app looks like: a 400x500 popover with a big purple-to-pink gradient circle timer in the middle, 'Focus Time! 🎯' in 28pt bold centered above it, three rounded pill buttons (Start / Pause / Reset) each with drop shadows, and a settings gear emoji in the corner. Settings open in a separate window that's a single long scrolling form. Be brutally honest, how generic is this and what would a design-award-level version do?",
+      "expected_output": "Mode B-style review of a described UI: verdict, macOS-specific conventions (menu bar extra, Settings scene, materials), ADA references, prioritized findings with fixes.",
+      "files": [],
+      "assertions": [
+        "Cites at least 3 specific Apple Design Award apps by name with year and/or category",
+        "Every cited ADA app/year/category matches references/ada-winners.md (no invented awards)",
+        "Ties each major recommendation to a concrete award-app example rather than generic taste",
+        "Gives a direct verdict on how generic the design is",
+        "Recommends macOS conventions: MenuBarExtra and/or a proper Settings scene with tabs/panes",
+        "Calls out the gradient, emoji gear, and 'Focus Time! 🎯' copy as slop",
+        "Suggests a menu-bar-level affordance (e.g., remaining time shown in the menu bar itself)",
+        "Findings are prioritized (impact or order of work)"
+      ]
+    }
+  ]
+}
